@@ -1,0 +1,18 @@
+#ptag {
+    font-family: Aachen BT;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 10px solid;
+    animation: typing 3s steps(22) forwards, blink 1s step-end infinite; 
+}
+
+@keyframes typing{
+    from{width: 0;}
+    to{width: 100%;}
+}
+
+@keyframes blink{
+    50%{
+        border-color: transparent;
+    }
+}

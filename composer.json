@@ -1,0 +1,21 @@
+{
+    "name": "kabirmarzooq/todo",
+    "description": "simple todolist api",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kabirmarzooq\\Todo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "KabirMarzooq",
+            "email": "markabir8@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "symfony/dotenv": "^7.3"
+    }
+}
