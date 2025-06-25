@@ -70,7 +70,7 @@ if (isset($_POST["register"])) {
         }
 
 
-        $stmt = $conn->prepare("SELECT * FROM user WHERE email = '$email' ");
+        $stmt = $conn->prepare("SELECT * FROM users WHERE email = '$email' ");
         $stmt->execute();
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
@@ -83,7 +83,7 @@ if (isset($_POST["register"])) {
             try {
                 $hash = password_hash($password, PASSWORD_DEFAULT);
 
-                $sql = "INSERT INTO user (name, email, password) VALUES (:name, :email, :password)";
+                $sql = "INSERT INTO users (username, email, password) VALUES (:name, :email, :password)";
 
                 $stmt = $conn->prepare($sql);
 

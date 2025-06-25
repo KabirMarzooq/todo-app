@@ -28,7 +28,7 @@ if (isset($_POST["login"])) {
         if ($email_err == "" && $password_err == "") {
             try {
 
-                $stmt = $conn->prepare("SELECT * FROM user WHERE email = :email");
+                $stmt = $conn->prepare("SELECT * FROM users WHERE email = :email");
 
                 $stmt->bindvalue(":email", $email, \PDO::PARAM_STR);
                 $stmt->execute();
@@ -37,7 +37,7 @@ if (isset($_POST["login"])) {
 
                     $user = $stmt->fetch(PDO::FETCH_ASSOC);
                     $hash = $user['password'];
-                    $username = $user['name'];
+                    $username = $user['username'];
 
                     if (password_verify($password, $hash)) {
 
