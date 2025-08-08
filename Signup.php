@@ -122,14 +122,16 @@ if (isset($_POST["register"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUp Page</title>
+    <title>Dev Mode | SignUp</title>
+    <link rel="icon" type="image/png" href="css/shadow.png">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/bdac33f4cb.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="text-white" style="background-color: black;">
+<body class="text-white mx-2" style="background-color: black;">
     <div class="d-flex justify-content-center align-items-center min-vh-100">
         <main class="form-signin w-100" style="max-width: 400px;">
+            <a href="index.php" style="color: #ffffff;"><i class="fas fa-times float-right h4"></i></a>
             <form id="signupForm" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
                 <h1 class="mb-3 text-center">Sign Up</h1>
 
@@ -145,7 +147,7 @@ if (isset($_POST["register"])) {
 
                 <div class="form-floating mb-3">
                     <div style="position: relative;">
-                        <input type="password" class="form-control bg-dark text-white" id="passwordInput" name="password" placeholder="Password" value="<?php echo $password ?>"/>
+                        <input type="password" class="form-control bg-dark text-white" id="passwordInput" name="password" placeholder="Password" value="<?php echo $password ?>" />
                         <i class="fa-solid fa-eye" id="show-password" style=" position: absolute; bottom: 30%;right: 4%; cursor: pointer; color: lightgray;"></i>
                     </div>
                     <span><?php echo $password_err; ?></span>
@@ -153,7 +155,7 @@ if (isset($_POST["register"])) {
 
                 <div class="form-floating mb-4">
                     <div style="position: relative;">
-                        <input type="password" class="form-control bg-dark text-white" id="confirmPasswordInput" name="confirm_pass" placeholder="Confirm Password"  value="<?php echo $confirm_pass; ?>" />
+                        <input type="password" class="form-control bg-dark text-white" id="confirmPasswordInput" name="confirm_pass" placeholder="Confirm Password" value="<?php echo $confirm_pass; ?>" />
                         <i class="fa-solid fa-eye" id="show-confirm-password" style=" position: absolute; bottom: 30%;right: 4%; cursor: pointer; color: lightgray;"></i>
                     </div>
                     <span><?php echo $confirm_pass_err; ?></span>

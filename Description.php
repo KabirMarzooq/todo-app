@@ -3,13 +3,13 @@ include __DIR__ . '/db.php';
 session_start();
 if (isset($_SESSION["logged_in"]) && $_SESSION["status"] === "active") {
 } else {
-    header("location:signup.php");
+    header("location:logout.php");
 }
 
 $user_id = $_SESSION["user_id"];
 
 if (!isset($_SESSION["user_id"])) {
-    header("location: signup.php");
+    header("location: logout.php");
     exit();
 }
 
@@ -65,27 +65,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDoList</title>
+    <link rel="icon" type="image/png" href="css/shadow.png">
+    <title>Dev Mode</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/effects.css">
     <script src="https://kit.fontawesome.com/bdac33f4cb.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="text-gray bg-info">
+<body>
     <section class="vh-100">
         <div class="d-flex justify-content-between p-3">
             <div>
-                <p class="text-white h3 font-weight-bold" id="ptag"> <?php echo "WELCOME " . ucwords(strtok($_SESSION["user"], " ")) . "."; ?></p>
+                <p class="h3 font-weight-bold" id="ptag"> <?php echo "WELCOME " . ucwords(strtok($_SESSION["user"], " ")) . "."; ?></p>
             </div>
 
-            <a href="logout.php">
+            <a href="logout.php"  style="color:  #001B48;"><i class="fas fa-times h3 d-block d-md-none"></i></a>
+            <a href="logout.php" class="d-none d-md-block">
                 <button class="btn btn-light btn-outline-dark">Log Out</button>
             </a>
         </div>
 
         <div class="container py-5">
             <div class="row d-flex align-items-center justify-content-center">
-                <div class="col col-xl-8">
+                <div class="col col-xl-7">
                     <div class="card bg-dark" style="border-radius: 15px;">
                         <div class="card-body p-5">
                             <p class="h1 text-center text-primary mb-4">
@@ -103,18 +105,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <ul class="list-group mb-0">
                                 <?php foreach ($todos as $todo): ?>
                                     <li
-                                        class="list-group-item d-flex justify-content-between align-items-center  border-right-0 border-left-0 border-top-0 border-white rounded-0 mb-2 bg-transparent text-white">
-                                        <div class="d-flex align-items-center text-lg">
-                                            <span><?php echo htmlspecialchars($todo['description']); ?></span>
+                                        class="list-group-item d-flex justify-content-around align-items-center  border-right-0 border-left-0 border-top-0 border-white rounded-0 mb-2 bg-transparent text-white">
+                                        <div class="container-fluid">
+                                            <div class="row d-flex">
+                                                <div class="col-lg-6 col-md-6 col-sm-10 col-9">
+                                                    <span><?php echo htmlspecialchars($todo['description']); ?></span>
+                                                </div>
+                                                <div class="col-5 d-none d-md-block">
+                                                    <small class="text-muted ml-2"><?php echo $todo['created_time']; ?></small>
+                                                </div>
+                                                <div class="col-lg-1 col-md-1 col-sm-2 col-3">
+                                                    <form action="" method="POST" style="margin: 0;">
+                                                        <input type="hidden" name="delete_id" value="<?php echo $todo['id']; ?>">
+                                                        <button type="submit" name="delete" class="btn btn-sm text-primary border-0 bg-transparent">
+                                                            <i class="fas fa-times"></i>
+                                                        </button>
+                                                    </form>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <small class="text-muted ml-2"><?php echo $todo['created_date']; ?></small>
-
-                                        <form action="" method="POST" style="margin: 0;">
-                                            <input type="hidden" name="delete_id" value="<?php echo $todo['id']; ?>">
-                                            <button type="submit" name="delete" class="btn btn-sm text-primary border-0 bg-transparent">
-                                                <i class="fas fa-times"></i>
-                                            </button>
-                                        </form>
 
                                     </li>
                                 <?php endforeach; ?>

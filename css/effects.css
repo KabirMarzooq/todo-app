@@ -1,4 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("bgtodo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 #ptag {
+    color: #001B48;
     font-family: Aachen BT;
     overflow: hidden;
     white-space: nowrap;
@@ -15,4 +30,95 @@
     50%{
         border-color: transparent;
     }
+}
+
+.navbar-nav .nav-item:not(:first-child) {
+    margin-left: 20px;
+}
+
+.navbar-nav a{
+    color: black;
+}
+
+.log{
+    background-color: #001B48;
+    color: #ffffff;
+}
+
+.log:hover{
+    background-color: transparent;
+    border: 1px solid #001B48;
+    color: #001B48;
+}
+
+.sign{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+}
+
+.sign:hover{
+    background-color: black;
+    color: white;
+}
+
+.pro{
+    background: linear-gradient(to top, #011C40, #023859, #26658C);
+    color: white;
+}
+
+.carousel-caption{
+    text-align: justify;
+    color: black;
+}
+
+.pro li{
+    padding-top: 5px;
+}
+
+.border-top a{
+    text-decoration: underline;
+}
+
+html{
+    scroll-snap-type: y mandatory;
+}
+
+section{
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.fixed-top{
+    background-image: url("bgtodo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#footer p{
+    font-size: large;
+    padding-top: 5px;
+}
+
+#footer small{
+    color: #001B48;
+}
+
+#footer li a{
+    text-decoration: none;
+    color: #000000;
+}
+
+#footer{
+    position: relative;
+}
+
+.bottom{
+    position: absolute;
+    bottom: 5px;
 }

@@ -54,7 +54,7 @@ if (isset($_POST["login"])) {
                         $password_err = "Invalid PASSWORD";
                     }
                 } else {
-                    $email_err = "THIS ACCOUNT DOES NOT EXIST";
+                    $email_err = "THIS ACCOUNT IS UNAVAILABLE";
                 }
             } catch (\PDOException $e) {
                 echo "Database Error: " . $e->getMessage();
@@ -71,14 +71,16 @@ if (isset($_POST["login"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LogIn Page</title>
+    <title>Dev Mode | LogIn</title>
+    <link rel="icon" type="image/png" href="css/shadow.png">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/bdac33f4cb.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="text-white" style="background-color: black;">
+<body class="text-white mx-2" style="background-color: black;">
     <div class="d-flex justify-content-center align-items-center min-vh-100">
         <main class="form-signin w-100" style="max-width: 400px;">
+            <a href="index.php" style="color: #ffffff;"><i class="fas fa-times float-right h4"></i></a>
             <form id="LoginForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <h1 class="mb-3 fw-normal text-center">Log In</h1>
 
@@ -87,7 +89,7 @@ if (isset($_POST["login"])) {
                     <span><?php echo $email_err; ?></span>
                 </div>
 
-                <div class="form-floating mb-4" >
+                <div class="form-floating mb-4">
                     <div style="position: relative;">
                         <input type="password" class="form-control bg-dark text-white" id="passwordInput" placeholder="Password" name="password" value="<?php echo $password ?>">
                         <i class="fa-solid fa-eye" id="show-password" style=" position: absolute; bottom: 30%;right: 4%; cursor: pointer; color: lightgray;"></i>
