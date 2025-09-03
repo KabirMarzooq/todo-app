@@ -69,7 +69,7 @@
 
     <section class="container">
         <div class="row">
-            <div class="col-5">
+            <div class="col-5 pt-5">
                 <div id="demo" class="carousel slide" data-ride="carousel" data-ride="carousel" data-interval="4000" data-pause="false">
 
                     <!-- Indicators -->
@@ -82,7 +82,7 @@
                     <!-- Slideshow -->
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="css/shadow.png" alt="..." class="d-block w-100">
+                            <img src="css/Tmask.png" alt="..." class="d-block w-100">
                             <div class="carousel-caption">
                                 <h1 style="font-weight:900; color: #001B48;"> DEV MODE </h1><br><br><br>
                                 <h3>Think, Plan and Track.</h3>
@@ -90,7 +90,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="css/shadow.png" alt="..." class="d-block w-100">
+                            <img src="css/Tmask.png" alt="..." class="d-block w-100">
                             <div class="carousel-caption">
                                 <h1 style="font-weight:900; color: #001B48;"> DEV MODE </h1><br><br><br>
                                 <h2>One Tool + One Click</h2>
@@ -98,7 +98,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="css/shadow.png" alt="..." class="d-block w-100">
+                            <img src="css/Tmask.png" alt="..." class="d-block w-100">
                             <div class="carousel-caption">
                                 <h1 style="font-weight:900; color: #001B48;"> DEV MODE </h1><br><br><br>
                                 <h1>The Modern Way<br>To Live.</h1>
@@ -130,21 +130,21 @@
 
     <section id="how" class="container-fluid bg-white d-flex justify-content-center align-items-center">
         <div class="container">
-            <h3 style="color: #001B48;">How to get Started?</h3>
+            <h3 style="color: #001B48;" class="autoShow">How to get Started?</h3>
             <div class="row">
-                <div class="col">
+                <div class="col autoShow">
                     <img src="css/1st.png" alt="..." class="d-block w-100 img-fluid">
                     <h6 class="p-2 pt-4 h6">1. 📝✒️Signup to become a fellow Dev Mode user.</h6>
                 </div>
-                <div class="col">
+                <div class="col autoShow">
                     <img src="css/2nd.png" alt="..." class="d-block w-100 img-fluid">
                     <h6 class="p-2 pt-4 h6">2. Get Started & enter your ToDo.👨‍💻⌨️</h6>
                 </div>
-                <div class="col">
+                <div class="col autoShow">
                     <img src="css/3rd.png" alt="..." class="d-block w-100 img-fluid">
                     <h6 class="p-2 pt-4 h6">3. Click Add. <i class="fa-regular fa-hand-pointer"></i></h6>
                 </div>
-                <div class="col">
+                <div class="col autoShow">
                     <img src="css/4th.png" alt="..." class="d-block w-100 img-fluid">
                     <h6 class="p-2 pt-4 h6">4. And Keep track of all your activities for the day. 🤩🥳📝</h6>
                 </div>
@@ -153,9 +153,9 @@
     </section>
 
     <section id="prem" class="container" style="padding-top: 70px;">
-        <h3 style="color: #001B48;">Upgrade your plan</h3>
-        <div class="row pt-4">
-            <div class="col p-5 pro rounded-lg mx-1">
+        <h3 style="color: #001B48; text-align: center;">Upgrade your plan</h3>
+        <div class="row pt-5">
+            <div class="col p-5 pro rounded-lg mx-1 autoShow">
                 <h3>Free</h3>
                 <h2>NGN 0.00</h2>
                 <p>Per month</p>
@@ -170,7 +170,7 @@
                     <li>Strictly Web based.</li>
                 </ul>
             </div>
-            <div class="col p-5 pro rounded-lg mx-1">
+            <div class="col p-5 pro rounded-lg mx-1 autoShow">
                 <h3>Plus</h3>
                 <h2>NGN 2500.00</h2>
                 <p>Per month</p>
@@ -184,7 +184,7 @@
                     <li>Limited Access to our AI features.</li>
                 </ul>
             </div>
-            <div class="col p-5 pro rounded-lg mx-1">
+            <div class="col p-5 pro rounded-lg mx-1 autoShow">
                 <h3>Pro</h3>
                 <h2>NGN 8000.89</h2>
                 <p>Per month</p>
@@ -203,7 +203,7 @@
 
     <section class="container-fluid bg-white my-5 py-5">
         <div class="container">
-            <div class="row py-5" id="about">
+            <div class="row py-5 autoShow" id="about">
                 <div class="col">
                     <h3 style="color: #001B48;">About Us</h3>
                 </div>
@@ -215,7 +215,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row autoShow">
                 <div class="col border-top border-secondary px-0 pt-3">
                     <h5 class="mb-5">The top-ranked productivity app that brings clarity
                         and efficiency to millions of people and teams.</h5>
@@ -231,7 +231,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row autoShow">
                 <div class="col border-top border-secondary px-0 pt-3">
                     <h5 class="mb-5">Pioneering async- and remote-first work for over a decade.
                         We’re bootstrapped, profitable, and here for the long-run.</h5>
@@ -247,14 +247,14 @@
                 </div>
             </div>
 
-            <h6 class="h6">Founded In 1983. With only 12 workers.</h6>
-            <h6 class="h6">Now a company of 5000+ workers around the globe.</h6>
+            <h6 class="h6 autoShow">Founded In 1983. With only 12 workers.</h6>
+            <h6 class="h6 autoShow">Now a company of 5000+ workers around the globe.</h6>
         </div>
     </section>
 
-    <section id="footer" class="container-fluid p-5 bg-white">
+    <section id="footer" class="container-fluid pt-5 bg-white">
         <div class="row" style="padding-top: 100px;">
-            <div class="col-3">
+            <div class="col-3 autoShow">
                 <div class="d-flex align-items-center justify-content-start">
                     <img src="css/shadow.png" alt="Dev Mode" height="30px" width="40px">
                     <h4 style="font-weight:900; color: #001B48;" class="px-2"> DEV MODE </h4>
@@ -264,7 +264,7 @@
             </div>
             <div class="col-9">
                 <div class="row d-flex justify-content-end">
-                    <div class="col-2">
+                    <div class="col-2 autoShow">
                         <h6>Features</h6>
                         <ul class="list-unstyled">
                             <li class="pt-3"><a href="#how">How It Works</a></li>
@@ -273,7 +273,7 @@
                             <li class="pt-3"><a href="#footer">Templates</a></li>
                         </ul>
                     </div>
-                    <div class="col-3">
+                    <div class="col-3 autoShow">
                         <h6>Resources</h6>
                         <ul class="list-unstyled">
                             <li class="pt-3"><a href="#footer">Download App</a></li>
@@ -285,7 +285,7 @@
                             <li class="pt-3"><a href="#footer">Status</a></li>
                         </ul>
                     </div>
-                    <div class="col-2">
+                    <div class="col-2 autoShow">
                         <h6>Company</h6>
                         <ul class="list-unstyled">
                             <li class="pt-3"><a href="#about">About Us</a></li>
@@ -295,7 +295,7 @@
                             <li class="pt-3"><a href="#footer">Twist</a></li>
                         </ul>
                     </div>
-                    <div class="col-1 d-flex flex-column align-items-center">
+                    <div class="col-1 d-flex flex-column align-items-center autoShow">
                         <i class="fa-brands fa-square-x-twitter h5" style="color: #000000;"></i>
                         <i class="fa-brands fa-linkedin h5 pt-3" style="color: #000000;"></i>
                         <i class="fa-brands fa-youtube h5 pt-3" style="color: #000000;"></i>
@@ -304,7 +304,7 @@
                 </div>
             </div>
         </div>
-        <div class="row d-flex text-muted align-items-center bottom">
+        <div class="row d-flex text-muted align-items-center bottom autoShow">
             <small class="pr-1"><a class="text-muted" href="#footer">Security</a></small> |
             <small class="pr-1 pl-1"><a class="text-muted" href="#footer">Privacy</a></small> |
             <small class="pr-4 pl-1"><a class="text-muted" href="#footer">Terms</a></small> &copy;
